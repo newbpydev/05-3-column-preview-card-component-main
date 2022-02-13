@@ -145,6 +145,7 @@ h1 {
   padding: 1.8rem 3.6rem;
   border-radius: 5rem;
   cursor: pointer;
+  transition: all .2s;
 }
 
 .section-prev-card .prev-col-art:nth-child(1) .art-learn-more {
@@ -189,6 +190,11 @@ h1 {
 .attribution a {
   color: var(--prim-color-orange);
   text-decoration: none;
+  transition: all .2s;
+
+}
+.attribution a:hover {
+  text-decoration: wavy underline var(--prim-color-dark-cyan);
 }
 
 
