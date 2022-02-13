@@ -28,7 +28,7 @@ features to make the desktop version a little more pleasant.
 ### Links
 
 - Solution URL: [GitHub](https://github.com/newbpydev/05-3-column-preview-card-component-main)
-- Live Site URL: [Live Site](https://festive-roentgen-b5d430.netlify.app/)
+- Live Site URL: [Live Site](https://cocky-poitras-2c8a95.netlify.app/)
 
 ## My process
 
@@ -37,57 +37,52 @@ features to make the desktop version a little more pleasant.
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Grid
 
 ### What I learned
 
-I have learned on this project that it is easy to get lost on which layout would
-be best to use, I have tried both flexbox and grid to see which would be easier
-to maintain later on. I have also tried the mobile-first approach and work my
-way to the desktop version.
+I have learned on this project that it is okay to take your time to play around
+and experiment with your code to get the desired effects, I am really enjoying
+the experience of working on my own discoveries.
 
 ```css
-  .wrapper {
-    padding: 3.2rem 9.6rem;
-    background-color: var(--prim-main-background-color);
-    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
-    position: relative;
-  }
+.art-learn-more {
+  font-family: inherit;
+  background-color: var(--neut-color-bg-headings-btns);
+  border-style: none;
+  padding: 1.8rem 3.6rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all .2s;
+}
 
-  .wrapper::before {
-    position: absolute;
-    content: "";
-    height: 10%;
-    width: 60%;
-    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
-    transform: rotate(-3deg);
-    left: 0rem;
-    bottom: 2rem;
-    z-index: -1;
-    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.5);
-  }
+.section-prev-card .prev-col-art:nth-child(1) .art-learn-more {
+  color: var(--prim-color-orange); 
+}
+.section-prev-card .prev-col-art:nth-child(1) .art-learn-more:hover {
+  color: var(--neut-color-bg-headings-btns); 
+  background-color: var(--prim-color-orange);
+  box-shadow: inset 0rem 0rem 0rem .2rem var(--neut-color-bg-headings-btns);
+}
 
-  .wrapper::after {
-    position: absolute;
-    content: "";
-    height: 10%;
-    width: 60%;
-    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
-    transform: rotate(3deg);
-    right: 0rem;
-    bottom: 2rem;
-    z-index: -1;
-    box-shadow: -3rem 3rem 3rem rgba(0, 0, 0, 0.5);
-  }
+.section-prev-card .prev-col-art:nth-child(2) .art-learn-more {
+  color: var(--prim-color-dark-cyan); 
+}
+.section-prev-card .prev-col-art:nth-child(2) .art-learn-more:hover {
+  color: var(--neut-color-bg-headings-btns); 
+  background-color: var(--prim-color-dark-cyan);
+  box-shadow: inset 0rem 0rem 0rem .2rem var(--neut-color-bg-headings-btns);
+}
 ```
 
 ### Continued development
 
-For future development, I will continue to train using the flexbox and combine
-it with the grid.
+For future development, I will continue to use css selectors in different ways
+to get the elements I want.
 
 ### Useful resources
 
-- [MDN - CSS Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) - The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+- [MDN - text-decoration](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration) - The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
 
 ## Author
 
