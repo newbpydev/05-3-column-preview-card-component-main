@@ -34,7 +34,7 @@
       - Weights: 700
 */
 /*! Fonts: "Lexend Deca" & "Big Shoulders Display"  */
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
 
 /*! Variables  */
 :root {
@@ -48,14 +48,22 @@
   --prim-font-size: 10px;
 }
 
-
 /*! general styles  */
+* {
+  /* margin: 0;
+  padding: 0; */
+}
 
+/*! Style Notes  */
+/*! Style Notes  */
+/*! Style Notes  */
+/*! Style Notes  */
 
-
-
-/*! Style Notes  */
-/*! Style Notes  */
-/*! Style Notes  */
-/*! Style Notes  */
-/*! Style Notes  */
+/*! Attibution  */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
