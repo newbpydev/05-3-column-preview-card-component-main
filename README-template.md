@@ -5,7 +5,6 @@ This is a solution to the [3-column preview card component challenge on Frontend
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -16,33 +15,20 @@ This is a solution to the [3-column preview card component challenge on Frontend
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+This is my solution to the 3-column preview card component. I added a few extra
+features to make the desktop version a little more pleasant.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot-desktop.png)
+![](./images/screenshot-mobile.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/newbpydev/05-3-column-preview-card-component-main)
+- Live Site URL: [Live Site](https://festive-roentgen-b5d430.netlify.app/)
 
 ## My process
 
@@ -51,61 +37,66 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I have learned on this project that it is easy to get lost on which layout would
+be best to use, I have tried both flexbox and grid to see which would be easier
+to maintain later on. I have also tried the mobile-first approach and work my
+way to the desktop version.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+  .wrapper {
+    padding: 3.2rem 9.6rem;
+    background-color: var(--prim-main-background-color);
+    box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+  .wrapper::before {
+    position: absolute;
+    content: "";
+    height: 10%;
+    width: 60%;
+    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
+    transform: rotate(-3deg);
+    left: 0rem;
+    bottom: 2rem;
+    z-index: -1;
+    box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, 0.5);
+  }
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+  .wrapper::after {
+    position: absolute;
+    content: "";
+    height: 10%;
+    width: 60%;
+    background: linear-gradient(to left, rgba(170, 92, 219, 0), rgba(170, 92, 219, 0));
+    transform: rotate(3deg);
+    right: 0rem;
+    bottom: 2rem;
+    z-index: -1;
+    box-shadow: -3rem 3rem 3rem rgba(0, 0, 0, 0.5);
+  }
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+For future development, I will continue to train using the flexbox and combine
+it with the grid.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN - CSS Filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) - The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [Juan Gomez](https://www.newbpydev.com)
+- Frontend Mentor - [@newbpydev](https://www.frontendmentor.io/profile/newbpydev)
+- Twitter - [@Newb_PyDev](https://twitter.com/Newb_PyDev)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+The code may not be perfect compared to my sensei @jonasschmedtman but I need
+to thank him because he has shown me the ropes and now I am a confident web
+designer.
